@@ -4,24 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Softer Software</title>
+    <meta name="description" content="Des logiciels vraiment « soft » : faciles à adapter, réutilisables, et accessibles aux organisations à but caritatif.">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://softersoftware.org/">
+    <meta property="og:title" content="Softer Software">
+    <meta property="og:description" content="Des logiciels vraiment « soft » : faciles à adapter, réutilisables, et accessibles aux organisations à but caritatif.">
+    <meta property="og:image" content="https://softersoftware.org/android-chrome-512x512.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta name="twitter:card" content="summary">
+
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
 
     <link href="assets/bootstrap.min.css" rel="stylesheet">
     <link href="assets/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/quicksand.css" rel="stylesheet">
+    <link href="assets/quicksand.css?v=2" rel="stylesheet">
     <style>
+        /* The sage of the heart, darkened so text stays readable */
+        :root {
+            --bs-success: #3f7058;
+            --bs-success-rgb: 63, 112, 88;
+        }
+        .btn-outline-success {
+            --bs-btn-color: #3f7058;
+            --bs-btn-border-color: #3f7058;
+            --bs-btn-hover-bg: #3f7058;
+            --bs-btn-hover-border-color: #3f7058;
+            --bs-btn-active-bg: #3f7058;
+            --bs-btn-active-border-color: #3f7058;
+            --bs-btn-focus-shadow-rgb: 63, 112, 88;
+        }
         h1, h2, h3, h4, h5, h6 {
             font-family: 'Quicksand', Arial, sans-serif;
-            font-weight: 700;
+            font-weight: 600;
             letter-spacing: 1px;
+        }
+        .content {
+            max-width: 42rem;
         }
     </style>
 </head>
 <body class="bg-light">
-<div class="container my-5 p-4">
+<div class="container content my-5 p-4">
     <div id="fr-content">
         <div class="d-flex justify-content-end mb-2">
             <a href="?lang=en" class="btn btn-outline-success btn-sm">English</a>
         </div>
+        <img src="android-chrome-192x192.png" width="72" height="72" alt="" class="d-block mx-auto mb-3">
         <h1 class="text-center mb-4 text-success">Softer Software</h1>
         <div class="mb-4">
             <p class="text-center text-secondary">
@@ -29,7 +65,7 @@
             </p>
         </div>
         <div class="mb-4">
-            <p>Notre société est bouleversée par le numérique. Cependant, les vraies difficultés de la vie ne
+            <p>Notre société est transformée en profondeur par le numérique. Cependant, les vraies difficultés de la vie ne
                 bénéficient pas du réel potentiel des outils numériques. En effet, développer un nouveau logiciel est&nbsp;:</p>
             <ul>
                 <li>souvent coûteux et réservé aux organisations disposant de ressources importantes</li>
@@ -41,7 +77,7 @@
                 <li>souvent inaccessible au grand public ou aux organisations à but caritatif</li>
             </ul>
             <p>
-                Pourtant, les logiciels peuvent être vraiment « soft » —faciles à adapter et réutilisables— comme ils
+                Pourtant, les logiciels peuvent être vraiment «&nbsp;soft&nbsp;» —&nbsp;faciles à adapter et réutilisables&nbsp;— comme ils
                 étaient censés l'être à l'origine.
             </p>
         </div>
@@ -60,17 +96,18 @@
 
         <div class="border-start border-4 border-success p-3 my-4 fst-italic">
             Benjamin Layet, plus de 15 ans d'expérience dans les solutions logicielles maintenables. <a
-                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener"><i
-                class="bi bi-linkedin" style="font-size: 1.2em; vertical-align: middle;"></i></a>
+                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin" style="font-size: 1.2em; vertical-align: middle;" aria-hidden="true"></i></a>
         </div>
         <div class="text-center text-secondary mt-4 small">
-            &copy; 2025 Softer Software. Pour un numérique plus humain et accessible.
+            &copy; 2026 Softer Software. Pour un numérique plus humain et accessible.
         </div>
     </div>
     <div id="en-content" style="display:none;">
         <div class="d-flex justify-content-end mb-2">
             <a href="?lang=fr" class="btn btn-outline-success btn-sm">Français</a>
         </div>
+        <img src="android-chrome-192x192.png" width="72" height="72" alt="" class="d-block mx-auto mb-3">
         <h1 class="text-center mb-4 text-success">Softer Software</h1>
         <div class="mb-4">
             <p class="text-center text-secondary">
@@ -78,7 +115,7 @@
             </p>
         </div>
         <div class="mb-4">
-            <p>Our society has been transformed by digital technology. However, real life challenges do not benefit from the full
+            <p>Our society has been deeply transformed by digital technology. However, real-life challenges do not benefit from the full
             potential of digital tools. Developing new software is still:</p>
             <ul>
                 <li>often expensive and exclusive to organizations with significant resources</li>
@@ -90,7 +127,7 @@
                 <li>often inaccessible to the general public or charitable organizations</li>
             </ul>
             <p>
-                Yet, software can truly be "soft" —easy to adapt and reusable— as it was originally meant to be.
+                Yet, software can truly be “soft”—easy to adapt and reusable—as it was originally meant to be.
             </p>
         </div>
         <div class="container">
@@ -99,7 +136,7 @@
                     <div class="my-4 p-4 rounded-3 bg-success bg-opacity-10 text-center">
                         <h5 class="text-success text-uppercase small mb-3">Vision</h5>
                         <p class="lead mb-0">
-                            With truly "soft" software, it is actually possible to develop digital solutions that
+                            With truly “soft” software, it is actually possible to develop digital solutions that
                             directly address genuine needs.
                         </p>
                     </div>
@@ -109,12 +146,12 @@
 
         <div class="border-start border-4 border-success p-3 my-4 fst-italic">
             Benjamin Layet, over 15 years of experience in maintainable software solutions. <a
-                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener"><i
-                class="bi bi-linkedin" style="font-size: 1.2em; vertical-align: middle;"></i>
+                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                class="bi bi-linkedin" style="font-size: 1.2em; vertical-align: middle;" aria-hidden="true"></i>
         </a>
         </div>
         <div class="text-center text-secondary mt-4 small">
-            &copy; 2025 Softer Software. For a more humane and accessible digital world.
+            &copy; 2026 Softer Software. For a more humane and accessible digital world.
         </div>
     </div>
 </div>
@@ -123,6 +160,7 @@
   const params = new URLSearchParams(window.location.search)
   const lang = params.get('lang')
   if (lang === 'en') {
+    document.documentElement.lang = 'en'
     document.getElementById('fr-content').style.display = 'none'
     document.getElementById('en-content').style.display = 'block'
   } else {
