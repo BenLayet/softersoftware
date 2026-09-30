@@ -47,24 +47,52 @@
             letter-spacing: 1px;
         }
         .content {
-            max-width: 42rem;
+            max-width: 46rem;
+        }
+        body {
+            font-size: 1.0625rem;
+            line-height: 1.6;
+        }
+        .quote {
+            font-size: 0.95rem;
+        }
+        h1 {
+            font-size: 2.25rem;
+        }
+        /* On a laptop, the page sits in the middle of the screen when there is room */
+        @media (min-width: 768px) {
+            body {
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+            }
+        }
+        @media (max-width: 575.98px) {
+            h1 {
+                font-size: 1.75rem;
+            }
+        }
+        .author {
+            font-size: 0.95rem;
+        }
+        .vision {
+            font-size: 1.15rem;
         }
     </style>
 </head>
 <body class="bg-light">
-<div class="container content my-5 p-4">
+<div class="container content position-relative py-3 pt-md-5 pb-md-4">
     <div id="fr-content">
-        <div class="d-flex justify-content-end mb-2">
-            <a href="?lang=en" class="btn btn-outline-success btn-sm">English</a>
-        </div>
-        <img src="android-chrome-192x192.png" width="72" height="72" alt="" class="d-block mx-auto mb-3">
-        <h1 class="text-center mb-4 text-success">Softer Software</h1>
-        <div class="mb-4">
-            <p class="text-center text-secondary">
+        <a href="?lang=en" class="btn btn-outline-success btn-sm position-absolute top-0 end-0 m-3">English</a>
+        <h1 class="d-flex align-items-center justify-content-center gap-3 mt-5 mt-md-0 mb-3 text-success">
+            <img src="android-chrome-192x192.png" width="48" height="48" alt="">Softer Software
+        </h1>
+        <div class="mb-3">
+            <p class="quote text-center text-secondary">
                 <em>« Software was invented to be 'soft.' It was intended to be a way to easily change the behavior of machines. If we'd wanted the behavior of machines to be hard to change, we would have called it hardware. »</em> — Robert C. Martin, <u>Clean Architecture</u>, 2017
             </p>
         </div>
-        <div class="mb-4">
+        <div class="mb-3">
             <p>Le numérique a transformé notre société en profondeur. Mais il aide encore peu là où les besoins
                 sont les plus réels. Aujourd'hui, un logiciel est souvent&nbsp;:</p>
             <ul>
@@ -78,40 +106,33 @@
                 était censé l'être dès l'origine.
             </p>
         </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="my-4 p-4 rounded-3 bg-success bg-opacity-10 text-center">
-                        <h5 class="text-success text-uppercase small mb-3">Vision</h5>
-                        <p class="lead mb-0">
-                            Avec des logiciels vraiment «&nbsp;soft&nbsp;», on peut créer, avec et sans IA, des outils qui répondent précisément aux vrais besoins.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="my-3 p-3 rounded-3 bg-success bg-opacity-10 text-center">
+            <h5 class="text-success text-uppercase small mb-2">Vision</h5>
+            <p class="vision mb-0">
+                Avec des logiciels vraiment «&nbsp;soft&nbsp;», on peut créer, avec et sans IA, des outils qui répondent précisément aux vrais besoins.
+            </p>
         </div>
 
-        <div class="border-start border-4 border-success p-3 my-4 fst-italic">
+        <div class="author border-start border-4 border-success px-3 py-2 my-3 fst-italic">
             Benjamin Layet, plus de 15 ans d'expérience dans les solutions logicielles maintenables. <a
-                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-success"><i
                 class="bi bi-linkedin" style="font-size: 1.2em; vertical-align: middle;" aria-hidden="true"></i></a>
         </div>
-        <div class="text-center text-secondary mt-4 small">
+        <div class="text-center text-secondary mt-2 small">
             &copy; 2026 Softer Software. Pour un numérique plus humain et accessible.
         </div>
     </div>
     <div id="en-content" style="display:none;">
-        <div class="d-flex justify-content-end mb-2">
-            <a href="?lang=fr" class="btn btn-outline-success btn-sm">Français</a>
-        </div>
-        <img src="android-chrome-192x192.png" width="72" height="72" alt="" class="d-block mx-auto mb-3">
-        <h1 class="text-center mb-4 text-success">Softer Software</h1>
-        <div class="mb-4">
-            <p class="text-center text-secondary">
+        <a href="?lang=fr" class="btn btn-outline-success btn-sm position-absolute top-0 end-0 m-3">Français</a>
+        <h1 class="d-flex align-items-center justify-content-center gap-3 mt-5 mt-md-0 mb-3 text-success">
+            <img src="android-chrome-192x192.png" width="48" height="48" alt="">Softer Software
+        </h1>
+        <div class="mb-3">
+            <p class="quote text-center text-secondary">
                 <em>“Software was invented to be ‘soft.’ It was intended to be a way to easily change the behavior of machines. If we’d wanted the behavior of machines to be hard to change, we would have called it hardware.”</em> — Robert C. Martin, <u>Clean Architecture</u>, 2017
             </p>
         </div>
-        <div class="mb-4">
+        <div class="mb-3">
             <p>Digital technology has deeply transformed our society. But it still does little where needs are most
                 real. Today, software is often:</p>
             <ul>
@@ -124,26 +145,20 @@
                 Yet software can be truly “soft”: easy to adapt and to reuse, as it was always meant to be.
             </p>
         </div>
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-10">
-                    <div class="my-4 p-4 rounded-3 bg-success bg-opacity-10 text-center">
-                        <h5 class="text-success text-uppercase small mb-3">Vision</h5>
-                        <p class="lead mb-0">
-                            With truly “soft” software, we can build, with and without AI, tools that precisely meet real needs.
-                        </p>
-                    </div>
-                </div>
-            </div>
+        <div class="my-3 p-3 rounded-3 bg-success bg-opacity-10 text-center">
+            <h5 class="text-success text-uppercase small mb-2">Vision</h5>
+            <p class="vision mb-0">
+                With truly “soft” software, we can build, with and without AI, tools that precisely meet real needs.
+            </p>
         </div>
 
-        <div class="border-start border-4 border-success p-3 my-4 fst-italic">
+        <div class="author border-start border-4 border-success px-3 py-2 my-3 fst-italic">
             Benjamin Layet, over 15 years of experience in maintainable software solutions. <a
-                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener" aria-label="LinkedIn"><i
+                href="https://www.linkedin.com/in/benjaminlayet/" target="_blank" rel="noopener" aria-label="LinkedIn" class="text-success"><i
                 class="bi bi-linkedin" style="font-size: 1.2em; vertical-align: middle;" aria-hidden="true"></i>
         </a>
         </div>
-        <div class="text-center text-secondary mt-4 small">
+        <div class="text-center text-secondary mt-2 small">
             &copy; 2026 Softer Software. For a more humane and accessible digital world.
         </div>
     </div>
